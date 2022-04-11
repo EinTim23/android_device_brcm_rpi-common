@@ -19,8 +19,11 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_WIDTH := 1280
 TARGET_SCREEN_HEIGHT := 720
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+# Inherit some common AOSP stuff
+$(call inherit-product, device/google/atv/products/atv_base.mk)
+
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 
 # Su
 WITH_SU := true
